@@ -12,6 +12,7 @@ sequenceDiagram
     deactivate server
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
     activate server
+    Note right of browser: The server adds the user input to the notes list
     server->>browser: GET https://studies.cs.helsinki.fi/exampleapp/notes
     deactivate server
     
