@@ -1,23 +1,21 @@
 import { useState } from 'react'
 
-const App = () => {
-  const [ counter, setCounter ] = useState(0)
 
-  const handleClick = () => {
-    console.log('clicked')
-    setCounter(counter+1)
-  }
+
+const App = () => {
+  // save clicks of each button to its own state
+  const [good, setGood] = useState(0)
+  const [neutral, setNeutral] = useState(0)
+  const [bad, setBad] = useState(0)
 
   return (
     <div>
-      <div>{counter}</div>
-      <button onClick={() => setCounter(counter + 1)}>
-        plus
-      </button>
-      <button onClick={() => setCounter(0)}> 
-        zero
-      </button>
+      <div><h2>give feedback</h2></div>
+      Buttons go here
+      <div><h2>statistics</h2></div>
+      here
     </div>
   )
 }
+
 export default App
